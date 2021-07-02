@@ -1,0 +1,21 @@
+<h1>Lista de postagens</h1>
+<a href="/cad"><button class="btn btn-success">Cadastrar</button></a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Título </th>
+            <th scope="col">Conteudo</th>
+         </tr>
+    </thead>
+<tbody>
+    {{#each posts}}
+    <tr>
+    <td><h1>{{dataValues.titulo}}</h1></td>
+    <td><p>{{dataValues.conteudo}}</p></td>
+    <td><a href="/deletar/{{dataValues.id}}"><button class="btn btn-danger">Deletar</button></a></td>
+    <td><a href="/editar/{{dataValues.id}}"><button class="btn btn-warning">Editar</button></a></td>
+    {{/each}}
+    </tr>
+</tbody>
+</table>
